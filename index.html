@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudo de Javascript</title>
+    <style>
+        body{
+            background-color: rgb(92, 92, 233);
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     
     <script>
-    window.alert('irineu')
-    window.confirm('Are you sure?')
-    window.prompt('ihihihihih')
+        var n1 = Number(window.prompt('Digite um numero'))
+        var n2 = Number(window.prompt('Digite outro numero'))
+        var result = n1 + n2;
+
+        document.write(`soma ${result}`)
     </script>
 </body>
 </html>
