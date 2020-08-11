@@ -8,8 +8,10 @@
 <body>
     <script>
         var nome = window.prompt('digite seu nome')
+        var num = Number.parseInt(window.prompt('digite um valor'))
         document.write(`Olá, ${nome.toLowerCase()}, seu nome tem ${nome.length} letras<br>`)
         document.write(`e em letras maiúsculas fica ${nome.toUpperCase()}`)
+        document.write(`<br> valor: ${num.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
     </script>
 </body>
 </html>
