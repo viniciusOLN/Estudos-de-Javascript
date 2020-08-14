@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    
+    <h1>Somando Valores</h1>
+    
+    <input type="number" name="txt-n1" id="txt-n1">
+    <input type="number" name="txt-n2" id="txt-n2">
+    <input type="button" value="somar" class="button">
+    
+    <div class="result" id="res">
+
+    </div>
+
+    <script>
+        var button = document.querySelector('.button')
+        button.addEventListener('click', () => {
+            var tn1 = Number(document.getElementById('txt-n1').value)
+            var tn2 = Number(document.getElementById('txt-n2').value)
+            var res = document.getElementById('res')
+            var result = tn1 + tn2
+            res.innerHTML = `A soma de ${tn1} e ${tn2} é de: ${result}`
+
+        })
+    </script>
+</body>
+</html>
