@@ -19,13 +19,16 @@ if(date > 6 && date < 12){
     img.src = '/ex009/image/tarde.png'
     img.alt = 'Dia'
     estado.innerText = 'No momento está de dia!'
+    document.body.style.background = 'green'
 }else if(date > 12 && date < 18){
     img.src = '/ex009/image/dia.png'
     img.alt = 'Tarde'
     estado.innerText = 'No momento está de tarde!'
+    document.body.style.background = 'Orange'
 }else{
     img.src = '/ex009/image/noite.png'
     img.alt = 'Noite'
     estado.innerText = 'No momento está de noite!'
+    document.body.style.background = 'Gray'
 }
 
