@@ -32,3 +32,21 @@ if(date > 6 && date < 12){
     document.body.style.background = 'Gray'
 }
 
+var slider = document.querySelectorAll('.slider .img-slider')
+
+slider[0].style.display = 'block'
+
+setInterval(() => {
+    for(let index = 0; index <= slider.length; index++){
+        if(slider[index].style.display === 'block'){
+            slider[index].style.display = 'none'
+        }else{
+            slider[index].style.display = 'block'
+        }
+    }
+    
+}, 2000);
+
+
+
+
