@@ -33,28 +33,31 @@ if(date > 6 && date < 12){
 }
 
 var slider = document.querySelectorAll('.slider img')
+let total = slider.length
+let current = 0
+let duracao = 2000
 
-slider[0].style.display = 'block'
+function next(){
+    slider[current].classList.remove('selected')
 
-setInterval(() => {
-    for(let index = 0; index <= slider.length; index++){
-        if(slider[index].style.display == 'block'){
-            slider[index].style.display = 'none'
-        }else{
-            slider[index].style.display = 'block'
-        }
-    }
-}, 2000)
+    current++
 
-setInterval(() => {
+    if(current >= total)
+        current = 0
 
-    for(let i = 0; i < slider.length; i++){
-        slider[i].addEventListener('click', () => {
-            slider[i + 1].style.display = 'block'
-        })
-    }
+    slider[current].classList.add('selected')
+}
 
-}, 1000)
+function start(){
+   setInterval(() =>{
+        next()
+   }, duracao) 
+}
+
+window.addEventListener('load', start())
+
+
+
 
 
 
