@@ -38,13 +38,12 @@ slider[0].style.display = 'block'
 
 setInterval(() => {
     for(let index = 0; index <= slider.length; index++){
-        if(slider[index].style.display === 'block'){
+        if(slider[index].style.display == 'block'){
             slider[index].style.display = 'none'
         }else{
             slider[index].style.display = 'block'
         }
     }
-    
 }, 2000)
 
 setInterval(() => {
