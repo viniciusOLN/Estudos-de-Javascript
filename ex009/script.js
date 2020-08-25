@@ -45,7 +45,19 @@ setInterval(() => {
         }
     }
     
-}, 2000);
+}, 2000)
+
+setInterval(() => {
+
+    for(let i = 0; i < slider.length; i++){
+        slider[i].addEventListener('click', () => {
+            slider[i + 1].style.display = 'block'
+        })
+    }
+
+}, 1000)
+
+
 
 
 
