@@ -32,7 +32,7 @@ if(date > 6 && date < 12){
     document.body.style.background = 'Gray'
 }
 
-var slider = document.querySelectorAll('.slider .img-slider')
+var slider = document.querySelectorAll('.slider img')
 
 slider[0].style.display = 'block'
 
