@@ -48,11 +48,32 @@ function next(){
     slider[current].classList.add('selected')
 }
 
+function before(){
+    slider[current].classList.remove('selected')
+    current--
+
+    if(current >= total)
+        current = 0
+
+    if(current = 0)
+        current = total
+
+    slider[current].classList.add('selected')
+}
+
 function start(){
    setInterval(() =>{
         next()
    }, duracao) 
 }
+
+estado.addEventListener('click', () => {
+    next()
+})
+
+img.addEventListener('click', () => {
+    before()
+})
 
 window.addEventListener('load', start())
 
